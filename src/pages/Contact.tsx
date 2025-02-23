@@ -1,37 +1,38 @@
-
 import { useState } from "react";
 import { Mail, Phone, Facebook, Instagram, Youtube, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: "",
+    message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "תודה על פנייתך",
-      description: "נחזור אליך בהקדם האפשרי",
+      description: "נחזור אליך בהקדם האפשרי"
     });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: ""
+    });
   };
-
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "נרשמת בהצלחה",
-      description: "תודה שהצטרפת לניוזלטר שלנו",
+      description: "תודה שהצטרפת לניוזלטר שלנו"
     });
   };
-
-  return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8 text-center">צור קשר</h1>
+  return <div className="container mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold mb-8 text-center">נשמח לשמוע מכם</h1>
       
       {/* Contact Form Section */}
       <div className="max-w-2xl mx-auto mb-16 bg-white rounded-lg shadow-sm p-8 border border-gray-100">
@@ -39,46 +40,33 @@ const Contact = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-sm font-medium mb-2">שם מלא</label>
-            <input
-              type="text"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-md"
-              required
-            />
+            <input type="text" value={formData.name} onChange={e => setFormData({
+            ...formData,
+            name: e.target.value
+          })} className="w-full p-3 border border-gray-300 rounded-md" required />
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">דוא״ל</label>
-            <input
-              type="email"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-md"
-              required
-            />
+            <input type="email" value={formData.email} onChange={e => setFormData({
+            ...formData,
+            email: e.target.value
+          })} className="w-full p-3 border border-gray-300 rounded-md" required />
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">טלפון</label>
-            <input
-              type="tel"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-md"
-            />
+            <input type="tel" value={formData.phone} onChange={e => setFormData({
+            ...formData,
+            phone: e.target.value
+          })} className="w-full p-3 border border-gray-300 rounded-md" />
           </div>
           <div>
             <label className="block text-sm font-medium mb-2">הודעה</label>
-            <textarea
-              value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full p-3 border border-gray-300 rounded-md h-32"
-              required
-            ></textarea>
+            <textarea value={formData.message} onChange={e => setFormData({
+            ...formData,
+            message: e.target.value
+          })} className="w-full p-3 border border-gray-300 rounded-md h-32" required></textarea>
           </div>
-          <button
-            type="submit"
-            className="w-full bg-sbrt-800 text-white py-3 rounded-md hover:bg-sbrt-700 transition-colors"
-          >
+          <button type="submit" className="w-full bg-sbrt-800 text-white py-3 rounded-md hover:bg-sbrt-700 transition-colors">
             שלח הודעה
           </button>
         </form>
@@ -88,16 +76,8 @@ const Contact = () => {
       <div className="max-w-2xl mx-auto mb-16 bg-sbrt-50 rounded-lg p-8 border border-sbrt-100">
         <h2 className="text-2xl font-semibold mb-6 text-center">הרשמה לניוזלטר</h2>
         <form onSubmit={handleNewsletterSubmit} className="flex gap-4">
-          <input
-            type="email"
-            placeholder="הזן את כתובת המייל שלך"
-            className="flex-1 p-3 border border-gray-300 rounded-md"
-            required
-          />
-          <button
-            type="submit"
-            className="bg-sbrt-800 text-white px-6 py-3 rounded-md hover:bg-sbrt-700 transition-colors flex items-center gap-2"
-          >
+          <input type="email" placeholder="הזן את כתובת המייל שלך" className="flex-1 p-3 border border-gray-300 rounded-md" required />
+          <button type="submit" className="bg-sbrt-800 text-white px-6 py-3 rounded-md hover:bg-sbrt-700 transition-colors flex items-center gap-2">
             <Send className="w-4 h-4" />
             הרשמה
           </button>
@@ -142,8 +122,6 @@ const Contact = () => {
           </a>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
