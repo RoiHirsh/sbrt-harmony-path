@@ -40,7 +40,7 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8 space-x-reverse">
+          <div className="hidden md:flex gap-6 items-center">
             {links.map((link, index) => (
               <div key={index} className="relative group">
                 {link.isDropdown ? (
