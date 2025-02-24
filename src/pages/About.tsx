@@ -1,5 +1,5 @@
 
-import { BookOpen, Users, Lightbulb, GraduationCap } from "lucide-react";
+import { BookOpen } from "lucide-react";
 
 const About = () => {
   return (
@@ -35,32 +35,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Legacy Section */}
-      <div className="max-w-4xl mx-auto mb-16">
-        <h2 className="text-2xl font-semibold mb-6">המורשת של יצחק (בנבה) בן בַּשָּׂט ז"ל</h2>
-        <div className="bg-sbrt-50 p-6 rounded-lg">
-          <p className="mb-4">
-            בנבה היה מפקדו של עופר שימחי, מנכ"ל העמותה. ההיכרות האישית עם השכול והטראומה הייתה מניע מרכזי לפיתוח SBRT, מתוך הבנה כיצד ניתן ליצור מרחב של שינוי, הכלה וטרנספורמציה לחוזרים משדה הקרב.
-          </p>
-          <p>
-            אינטגרציה למושג הסמוראי - לשרת: איך אנו יכולים לשרת את אלו שמשרתים אותנו – בהגנה על משפחותינו ואורח חיינו. עקרון זה שזור בשיטה, המדגישה את החשיבות של קהילה תומכת ומעצימה לאנשים המתמודדים עם מצבי לחץ ודחק קיצוניים.
-          </p>
-        </div>
-      </div>
-
-      {/* Team Section */}
-      <div className="max-w-4xl mx-auto mb-16">
-        <h2 className="text-2xl font-semibold mb-6">צוות ההנהלה והמנחים</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {team.map((member, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-              <p className="text-sbrt-600">{member.role}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Theoretical Basis */}
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl font-semibold mb-6">בסיס תיאורטי ומדעי</h2>
@@ -87,37 +61,6 @@ const targetGroups = [
   "אנשי מקצוע ומסגרות הפועלות בתנאי לחץ מתמשך",
   "אנשים העוסקים במרחבים מבוססי הישג (כגון ספורטאים ואנשי צבא)",
   "מתמודדים עם תסמינים של חרדה, לחץ ופוסט טראומה"
-];
-
-const team = [
-  {
-    name: "ערן ברט, MA",
-    role: "מייסד ומדריך ראשי, מומחה באימון מבוסס תנועה וויסות גופני, בעל תואר שני בחקר סכסוכים, מו\"מ וגישור"
-  },
-  {
-    name: "איה ברט, MA",
-    role: "פסיכותרפיסטית ומדריכה בתחום הוויסות הרגשי והגופני, בעלת תואר שני בטיפול בתנועה"
-  },
-  {
-    name: "פרופ׳ דני חורש",
-    role: "ראש תחום מחקר ועניינים קליניים, חוקר טראומה ופסיכולוגיה קלינית"
-  },
-  {
-    name: "ד״ר רוני סימונס",
-    role: "פסיכולוג קליני בכיר, מלווה תהליכים טיפוליים בשיטה"
-  },
-  {
-    name: "פרופ׳ יניב אסף",
-    role: "חוקר מוח ומומחה לחיבורים עצביים"
-  },
-  {
-    name: "עידו קניון",
-    role: "חבר הנהלה, אחראי תחום פיננסים ופיתוח"
-  },
-  {
-    name: "דייב דרייק",
-    role: "חבר הנהלה, יועץ אסטרטגי ופיננסי"
-  }
 ];
 
 const researchSources = [
