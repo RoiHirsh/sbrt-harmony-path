@@ -33,16 +33,16 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
-      <div className="container mx-auto px-4">
+      <div className="max-w-full px-4 mx-auto">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-xl font-bold">
+          <Link to="/" className="text-xl font-bold shrink-0">
             SBRT
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-6 items-center">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6 overflow-x-auto pr-4">
             {links.map((link, index) => (
-              <div key={index} className="relative group">
+              <div key={index} className="relative group shrink-0">
                 {link.isDropdown ? (
                   <div className="flex items-center gap-1 cursor-pointer text-sm font-medium text-sbrt-500 hover:text-sbrt-600">
                     <span>{link.text}</span>
