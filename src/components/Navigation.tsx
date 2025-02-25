@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -31,9 +32,9 @@ const Navigation = () => {
   ];
 
   return (
-    <nav dir="rtl" className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
-      <div className="max-w-screen-xl mx-auto">
-        <div className="flex justify-between items-center h-16 px-4 md:px-8">
+    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+      <div className="max-w-full mx-auto">
+        <div className="flex justify-between items-center h-16 px-8 md:px-16">
           <Link to="/" className="text-xl font-bold shrink-0">
             SBRT
           </Link>
@@ -97,7 +98,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-200 animate-slide-up">
+          <div className="md:hidden absolute top-16 right-0 w-full bg-white border-b border-gray-200 animate-slide-up">
             <div className="flex flex-col space-y-4 p-4">
               {links.map((link, index) => (
                 <div key={index}>
