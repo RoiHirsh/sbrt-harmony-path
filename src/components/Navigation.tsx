@@ -35,18 +35,23 @@ const Navigation = () => {
             SBRT
           </Link>
 
-          {/* Hamburger Menu Button */}
-          <button
-            className="p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <X className="h-6 w-6 text-sbrt-600" />
-            ) : (
-              <Menu className="h-6 w-6 text-sbrt-600" />
-            )}
-          </button>
+          {/* Center Hamburger Menu Button */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <button
+              className="p-2"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? (
+                <X className="h-6 w-6 text-sbrt-600" />
+              ) : (
+                <Menu className="h-6 w-6 text-sbrt-600" />
+              )}
+            </button>
+          </div>
+
+          {/* Empty div to maintain flex justify-between */}
+          <div className="w-[52px]"></div>
         </div>
 
         {/* Mobile Menu Panel */}
@@ -54,12 +59,12 @@ const Navigation = () => {
           <div className="absolute top-16 right-0 w-full bg-white border-b border-gray-200 shadow-lg animate-slide-up">
             <div className="flex flex-col space-y-4 p-4">
               {links.map((link, index) => (
-                <div key={index}>
+                <div key={index} className="flex flex-col items-center">
                   {link.isDropdown ? (
-                    <div>
+                    <div className="w-full flex flex-col items-center">
                       <button
                         onClick={() => setIsAboutOpen(!isAboutOpen)}
-                        className="flex items-center justify-between w-full text-sm font-medium text-sbrt-500 hover:text-sbrt-600"
+                        className="flex items-center gap-2 text-sm font-medium text-sbrt-500 hover:text-sbrt-600"
                       >
                         <span>{link.text}</span>
                         <ChevronDown 
@@ -69,12 +74,12 @@ const Navigation = () => {
                         />
                       </button>
                       {isAboutOpen && (
-                        <div className="mt-2 mr-4 space-y-2">
+                        <div className="mt-2 space-y-2 w-full flex flex-col items-center">
                           {link.subItems?.map((subItem, subIndex) => (
                             <Link
                               key={subIndex}
                               to={subItem.path}
-                              className={`block text-sm hover:text-sbrt-600 ${
+                              className={`block text-sm hover:text-sbrt-600 text-center ${
                                 location.pathname === subItem.path
                                   ? "text-sbrt-800"
                                   : "text-sbrt-500"
