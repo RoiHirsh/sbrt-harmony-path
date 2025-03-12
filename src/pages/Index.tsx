@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Play, ArrowLeft, BookOpen, Users, Brain, Target } from "lucide-react";
 
@@ -7,7 +6,7 @@ const Index = () => {
     <div className="container mx-auto px-4 py-12">
       {/* Hero Section */}
       <section className="text-center mb-16 animate-fade-in">
-        <h1 className="text-5xl font-bold mb-6 font-rubik">
+        <h1 className="text-5xl font-bold mb-6 font-rubik" style={{ color: "grey" }}>
           אֵיתָן בָּרוּחַ - S.B.R.T ויסות וחוסן
         </h1>
         <p className="text-xl text-sbrt-600 max-w-4xl mx-auto mb-8 leading-relaxed">
