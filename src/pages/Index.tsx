@@ -47,35 +47,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Principles Section */}
+      {/* Updated SBRT Information Section */}
       <section className="mb-16">
-        <h2 className="text-2xl font-semibold mb-8 text-center">עקרונות עבודה מבוססי מחקר</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {workingPrinciples.map((principle, index) => (
-            <div
-              key={index}
-              className="p-6 bg-white rounded-xl shadow-sm border border-gray-100 transition-all hover:shadow-md"
-            >
-              {principle.icon}
-              <h3 className="text-lg font-semibold mb-3">{principle.title}</h3>
-              <p className="text-sbrt-600">{principle.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Additional Principles */}
-      <section className="mb-16">
-        <div className="grid md:grid-cols-2 gap-8">
-          {additionalPrinciples.map((principle, index) => (
-            <div
-              key={index}
-              className="p-6 bg-sbrt-50 rounded-xl"
-            >
-              <h3 className="text-lg font-semibold mb-3">{principle.title}</h3>
-              <p className="text-sbrt-600">{principle.description}</p>
-            </div>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <p>SBRT הינו מודל  אינטגרטיבי לפיתוח חוסן, המבוסס על ההבנה כי מיומנויות וויסות ניתנות ללמידה, תרגול ויישום, וכי שיפור הוויסות העצמי מגביר את החוסן האישי.</p>
+          <p>במודל SBRT אנו מפתחים ומחזקים מיומנויות וויסות בארבעה תחומים מרכזיים:</p>
+          <p>🔹 ויסות רגשי – פיתוח מודעות למצבים פנימיים, ניהול רגשות ולמידת תגובות אדפטיביות למצבי לחץ.</p>
+          <p>🔹 ויסות גופני-תחושתי – איזון מערכת העצבים באמצעות נשימה ותנועה, חיבור בין גוף לתודעה ושיפור ניהול מצבי סטרס .</p>
+          <p>🔹 ויסות חברתי – שימוש בקשרים בין-אישיים ככלי לוויסות משותף (קו-רגולציה), בניית רשת תמיכה ותחושת ביטחון במרחב החברתי.</p>
+          <p>🔹 גמישות נוירו פלסטית – פיתוח יכולת הסתגלות למצבים משתנים, חיזוק דפוסים עצביים ולמידת תגובות חדשות דרך חוויות תרגול מגוונות.</p>
+          <p>באמצעות תרגול שיטתי ומכוון בארבעת התחומים הללו, ניתן לשפר את היכולת להתמודד עם אתגרים, להפחית עומס רגשי ופיזי ולבנות חוסן אישי לטווח הארוך.</p>
         </div>
       </section>
 
@@ -99,48 +80,6 @@ const Index = () => {
     </div>
   );
 };
-
-const workingPrinciples = [
-  {
-    title: "יציבות ותנועתיות",
-    description: "בסיס איתן כעוגן לשהייה וויסות דינאמי",
-    icon: <Target className="w-8 h-8 text-sbrt-600 mb-4" />
-  },
-  {
-    title: "קוהרנטיות",
-    description: "איזון בין החזקה לתנועה, שילוב סימפטי ופאראסימפטי ליצירת הרמוניה",
-    icon: <Brain className="w-8 h-8 text-sbrt-600 mb-4" />
-  },
-  {
-    title: "סינכרוניזציה",
-    description: "חיבור בין אנשים יוצר וויסות ושינוי עמוק",
-    icon: <Users className="w-8 h-8 text-sbrt-600 mb-4" />
-  },
-  {
-    title: "תפיסה תחושתית",
-    description: "חידוד המודעות לגוף ולתחושות כבסיס לשליטה וניהול עצמי",
-    icon: <BookOpen className="w-8 h-8 text-sbrt-600 mb-4" />
-  }
-];
-
-const additionalPrinciples = [
-  {
-    title: "מבט חומל",
-    description: "אימון על גישה מאוזנת לתנועה ולחיים"
-  },
-  {
-    title: "מעבר לעמדה אקטיבית",
-    description: "פיתוח יכולת תגובה למול אתגרים אישיים וחברתיים, חיזוק תחושת שליטה ויכולת השפעה"
-  },
-  {
-    title: "קו-רגולציה",
-    description: "שימוש בקשרים בין-אישיים לתמיכה וויסות משותף"
-  },
-  {
-    title: "משחקיות וחיוניות",
-    description: "יציאה מתגובות הישרדותיות, פיתוח יכולת אקספלורציה והתנסות בטוחה"
-  }
-];
 
 const quickNav = [
   {
