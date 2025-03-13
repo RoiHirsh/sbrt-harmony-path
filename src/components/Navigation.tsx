@@ -19,9 +19,9 @@ const Navigation = () => {
         { path: "/legacy", text: "המורשת של יצחק (בנבה) בן בַּשָּׂט ז\"ל" }
       ]
     },
-    { path: "/method", text: "השיטה" },
+    { path: "/method", text: "המודל" },
     { path: "/practice", text: "תרגול אישי" },
-    { path: "/programs", text: "תוכניות והדרכות" },
+    { path: "/programs", text: "תוכניות והכשרות" },
     { path: "/testimonials", text: "המלצות" },
     { path: "/partners", text: "שותפויות" },
     { path: "/contact", text: "צור קשר" },

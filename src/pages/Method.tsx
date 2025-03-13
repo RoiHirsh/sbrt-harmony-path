@@ -1,19 +1,25 @@
-
 import { Brain, Users, Activity, Heart } from "lucide-react";
 
 const Method = () => {
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8 text-center">מהי שיטת SBRT?</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">מהו מודל SBRT?</h1>
       <div className="max-w-4xl mx-auto">
         <div className="mb-16">
           <p className="text-xl mb-12 text-center text-sbrt-600">
-            SBRT היא גישה אינטגרטיבית לפיתוח חוסן וויסות עצמי
+          מודל העבודה sbrt נבנה בעקבות מחקרים ובהסתמכות על שיטות מתוקפות לעבודה סומטית (גופנית) עם פוסט טראומה. במרכזו – עקרון יצירת תהליכי "bottom up"  כדרך יעילה ללמד את הגוף דפוסי וויסות אשר משפיעים על מערכת העצבים ומהווים תשתית לעיבוד הטראומה.
+          <br>
+          </br>
+          <br>
+          </br>
+התכנית "איתן ברוח" כוללת 12 מפגשים בהם יתרגלו המשתתפים טכניקות מעולם אומנויות הלחימה והתנועה, מיינדפולנס ותרגול נשימה. המשתתפים ירכשו מיומנויות תנועתיות ומנטליות אשר יסייעו בהטמעת תהליכי וויסות גופני על מנת להפחית תסמינים פוסט טראומטיים ולהגביר את יכולת ההסתגלות למציאות משתנה.
           </p>
+          <br>
+          </br>
 
           {/* Core Principles */}
           <div className="mb-16">
-            <h2 className="text-2xl font-semibold mb-6 text-center">עקרונות מרכזיים</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-center">עקרונות עבודה מבוססי מחקר: שילוב בין תנועה, ויסות רגשי, וויסות גופני-תחושתי וסנכרון נוירופלסטי</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {corePrinciples.map((principle, index) => (
                 <div 
@@ -21,7 +27,6 @@ const Method = () => {
                   className="bg-white p-6 rounded-lg shadow-sm border border-gray-100"
                 >
                   <div className="h-12 w-12 bg-sbrt-50 rounded-lg flex items-center justify-center mb-4">
-                    {principle.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{principle.title}</h3>
                   <p className="text-sbrt-600">{principle.description}</p>
@@ -30,25 +35,9 @@ const Method = () => {
             </div>
           </div>
 
-          {/* How it Works */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-semibold mb-6">איך זה עובד?</h2>
-            <p className="text-lg mb-6">
-              SBRT משלב בין תרגולים סומטיים, נשימה מודעת, עבודה קבוצתית וחוויית תנועה מבוססת אומנויות לחימה.
-            </p>
-            <div className="space-y-4">
-              {howItWorks.map((item, index) => (
-                <div key={index} className="bg-sbrt-50 p-6 rounded-lg">
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sbrt-700">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Who is it for */}
           <div className="mb-16">
-            <h2 className="text-2xl font-semibold mb-6">למי זה מתאים?</h2>
+            <h2 className="text-2xl font-semibold mb-6">למי מתאים המודל?</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {targetAudience.map((audience, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
@@ -58,25 +47,13 @@ const Method = () => {
               ))}
             </div>
           </div>
-
-          {/* Research Background */}
-          <div>
-            <h2 className="text-2xl font-semibold mb-6">רקע מחקרי</h2>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <p className="mb-6">
-                SBRT מבוסס על מחקרים מתחום הנוירופסיכולוגיה, חקר המוח ואומנויות התנועה, המדגימים כיצד תרגול פיזי ומנטלי משפיע על:
-              </p>
-              <div className="space-y-4">
-                {researchBackground.map((research, index) => (
-                  <div key={index} className="border-r-2 border-sbrt-200 pr-4">
-                    <h3 className="font-semibold mb-2">{research.topic}</h3>
-                    <p className="text-sbrt-600">{research.description}</p>
-                    <p className="text-sbrt-500 text-sm mt-1">{research.citation}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          <br>
+          </br>
+          <br>
+          </br>
+          <p>
+          SBRT אינה רק מודל תיאורטי – אלא, מתודולוגיה פרקטית המעניקה כלים יומיומיים לשיפור איכות החיים דרך תרגול חווייתי, תנועתי וחברתי.
+          </p>
         </div>
       </div>
     </div>
@@ -84,26 +61,38 @@ const Method = () => {
 };
 
 const corePrinciples = [
-  {
-    title: "ויסות רגשי",
-    description: "ניהול רגשות, פיתוח מודעות למצבים פנימיים ולמידת תגובות אדפטיביות למצבי לחץ",
-    icon: <Heart className="w-6 h-6 text-sbrt-600" />
-  },
-  {
-    title: "ויסות גופני-תחושתי",
-    description: "איזון מערכת העצבים באמצעות נשימה ותנועה, חיבור הגוף לתודעה ולשיפור ניהול האנרגיה הפנימית",
-    icon: <Activity className="w-6 h-6 text-sbrt-600" />
-  },
-  {
-    title: "ויסות חברתי",
-    description: "שימוש בקשרים בין-אישיים כתהליך של קו-רגולציה, בניית רשת תמיכה ותחושת ביטחון בסביבה חברתית",
-    icon: <Users className="w-6 h-6 text-sbrt-600" />
-  },
-  {
-    title: "גמישות נוירופלסטית",
-    description: "חיזוק דפוסים עצביים, למידת תגובות חדשות והתאמה למצבים משתנים דרך חוויות תרגול שונות",
-    icon: <Brain className="w-6 h-6 text-sbrt-600" />
-  }
+	{
+		title: "יציבות ותנועתיות",
+		description: "בסיס איתן כעוגן לשהייה וויסות דינאמי."
+	},
+	{
+		title: "קוהרנטיות",
+		description: "איזון בין החזקה לתנועה, שילוב סימפטי ופאראסימפטי ליצירת הרמוניה."
+	},
+	{
+		title: "סינכרוניזציה",
+		description: "חיבור בין אנשים יוצר וויסות ושינוי עמוק."
+	},
+	{
+		title: "תפיסה תחושתית",
+		description: "חידוד המודעות לגוף ולתחושות כבסיס לשליטה וניהול עצמי."
+	},
+	{
+		title: "מבט חומל",
+		description: "אימון על גישה מאוזנת לתנועה ולחיים."
+	},
+	{
+		title: "מעבר לעמדה אקטיבית",
+		description: "פיתוח יכולת תגובה למול אתגרים אישיים וחברתיים, חיזוק תחושת שליטה ויכולת השפעה."
+	},
+	{
+		title: "קו-רגולציה",
+		description: "שימוש בקשרים בין-אישיים לתמיכה וויסות משותף."
+	},
+	{
+		title: "משחקיות וחיוניות",
+		description: "יציאה מתגובות הישרדותיות, פיתוח יכולת אקספלורציה והתנסות בטוחה."
+	}
 ];
 
 const howItWorks = [
@@ -123,43 +112,16 @@ const howItWorks = [
 
 const targetAudience = [
   {
-    group: "יחידים",
-    description: "המעוניינים לרכוש כלים להתמודדות עם מצבי סטרס ולשפר את יכולת הוויסות העצמי שלהם"
+    group: "",
+    description: "מתמודדים עם תסמינים של חרדה, לחץ מתמשך ופוסט טראומה"
   },
   {
-    group: "קבוצות תרגול",
-    description: "המעוניינות לפתח תחושת שייכות ותמיכה דרך תרגול משותף, תוך למידה זה מזה"
+    group: "",
+    description: "אנשי מקצוע הפועלים בתנאי לחץ מתמשך (אנשי טיפול/ כוחות הצלה/ משטרה)"
   },
   {
-    group: "צוותים רפואיים ואנשי מקצוע",
-    description: "עובדים בתנאי לחץ המעוניינים לשלב מיומנויות של ויסות גופני ונפשי בעבודתם היומיומית"
-  },
-  {
-    group: "אנשי ביטחון ואוכלוסיות חשופות ללחץ מתמשך",
-    description: "מתן כלים לניהול תגובות במצבי חירום ובתנאי שטח מורכבים"
-  }
-];
-
-const researchBackground = [
-  {
-    topic: "מערכת העצבים האוטונומית",
-    description: "וויסות עצמי דרך נשימה ותנועה מבוקרת",
-    citation: "Porges, 2011"
-  },
-  {
-    topic: "התמודדות עם סטרס וטראומה",
-    description: "חיזוק החוסן הפיזיולוגי והרגשי דרך תהליכי למידה מבוססי תנועה",
-    citation: "Van der Kolk, 2014"
-  },
-  {
-    topic: "גמישות מוחית ונוירופלסטיות",
-    description: "השפעת תרגול עקבי על מבנה ותפקוד המוח",
-    citation: "Davidson & McEwen, 2012"
-  },
-  {
-    topic: "הקשרים בין תרגול קבוצתי והעצמה אישית",
-    description: "כיצד תרגול במסגרת חברתית מעודד שיפור מיומנויות וויסות",
-    citation: "Schore, 2003"
+    group: "",
+    description: "אנשים העוסקים במיטוב ביצועים בתנאי לחץ (כגון ספורטאים ואנשי צבא)"
   }
 ];
 
