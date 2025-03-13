@@ -7,19 +7,23 @@ const Index = () => {
       {/* Hero Section */}
       <section className="text-center mb-16 animate-fade-in">
         <h1 className="text-5xl font-bold mb-6 font-rubik" style={{ color: "grey" }}>
-          אֵיתָן בָּרוּחַ - S.B.R.T ויסות וחוסן
+        S.B.R.T
         </h1>
-        <p className="text-xl text-sbrt-600 max-w-4xl mx-auto mb-8 leading-relaxed">
-          ברוכים הבאים לאיתן ברוח, שיטה פורצת דרך לפיתוח חוסן וויסות עצמי, המספקת כלים מעשיים להתמודדות עם לחץ, חרדה וטראומה. SBRT היא שיטה מבוססת מחקר המשלבת עקרונות מעולמות התנועה, הנשימה והוויסות הקוגניטיבי, כדי ליצור איזון מנטלי וגופני.
+        <p>
+        מודל אימון ייחודי להתמודדות עם מתח, חרדה ותסמיני פוסט טראומה
         </p>
-        <p className="text-lg text-sbrt-600 max-w-3xl mx-auto mb-8">
-          אנו מאמינים שהגוף והנפש פועלים בהרמוניה, ולכן אנו מציעים כלים יישומיים המסייעים בהתמודדות עם מצבי דחק ומהווים בסיס ליצירת חוסן פנימי לטווח הארוך.
+        <br>
+        </br>
+        <p className="text-xl text-sbrt-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+          הכירו את תכנית "איתן ברוח"
+תכנית אימון להקניית מיומנויות וויסות וחוסן, המתבססת על תנועה, נשימה ואומנויות לחימה.
+התכנית כוללת 12 מפגשי אימון קבוצתיים, המתבססים על מודל sbrt , ומעניקים כלים יישומיים להתמודדות עם מצבי דחק וליצירת חוסן פנימי ארוך טווח
         </p>
         <Link 
           to="/method" 
           className="inline-flex items-center gap-2 bg-sbrt-800 text-white px-8 py-3 rounded-lg text-lg font-medium transition-all hover:bg-sbrt-700 focus:ring-2 focus:ring-sbrt-500"
         >
-          התחילו כאן - גלו איך SBRT יכול לעזור לכם
+         התחילו כאן – להתחבר אל החוסן מחדש
           <ArrowLeft className="w-5 h-5" />
         </Link>
       </section>
